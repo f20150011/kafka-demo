@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        InExpensiveOrder:
+          destination: order1
+          contentType: application/json
+        OutExpensiveOrder:
+          destination: order1
+          contentType: application/json
+        InNonExpensiveOrder:
+          destination: order2
+          contentType: application/json
+        OutNonExpensiveOrder:
+          destination: order2
+          contentType: application/json
